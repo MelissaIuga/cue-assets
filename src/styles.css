@@ -1,0 +1,487 @@
+/* ---------- Root Variables ---------- */
+:root {
+  --text-color-danger: #f44250;
+  --white: #f1f1f1;
+
+  --content-bg: #FFFFFF;
+  --dimmed: #707070;
+  --primary-default: #0552B5;
+}
+
+
+/* -------------------------- Global Styling ----------------------------- */
+
+/* ---------- Page Styling ---------- */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+html {
+  background-color: var(--content-bg);
+  color: var(--green-charcoal);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  height: 100%;
+  line-height: 0.5;
+}
+
+/* ---------- Typography ---------- */
+h1 {
+  font-size: 2em;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.1px;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.3em;
+  letter-spacing: 0.1px;
+}
+
+h4 {
+  font-weight: 400;
+  text-decoration: underline;
+  color: var(--pine-400);
+}
+
+p {
+  line-height: 1.4;
+}
+
+
+/* ---------- Link Styling ---------- */
+a {
+  color: var(--pine-400);
+  text-decoration: none;
+}
+
+/* ---------- Form, Input, and Button Styling ---------- */
+textarea,
+input,
+button,
+select {
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 8px;
+  border: solid #ADB5BD 1px;
+  padding: 1rem;
+  background-color: #F7FBF3;
+  line-height: 1.5;
+  margin: 0;
+}
+
+button {
+  display: flex;
+  height: 46px;
+  min-width: 64px;
+  padding: 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  border-radius: 4px;
+  color: var(--content-bg);
+  background-color: var(--primary-default);
+  box-shadow: -2px -1px 8px 0px rgba(0, 0, 0, 0.10) inset, 2px 1px 8px 0px rgba(0, 0, 0, 0.10) inset;
+}
+
+
+textarea:hover,
+input:hover,
+button:hover {
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.6), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+}
+
+button:active {
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.4);
+  transform: translateY(1px);
+}
+
+form[action$="destroy"] button,
+.btn-cancel,
+.btn-delete {
+  background-color: var(--white);
+  color: #f44250;
+}
+
+form[action$="destroy"] button:hover,
+.btn-cancel:hover,
+.btn-delete:hover {
+  background-color: #f44250;
+  color: var(--white);
+}
+
+input {
+  border: 2px solid ADB5BD;
+}
+
+.error {
+  border: 2px solid var(--text-color-danger);
+}
+
+/* ---------- Logo Styling ---------- */
+
+.logo {
+  margin-top: 10%;
+  padding-bottom: 10%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ---------- Form Specific Styling ---------- */
+
+.search-bar {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  background-color: var(--content-bg);
+}
+
+.formbtn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.formbtn>.secondary {
+  border: 1px solid var(--Colors-Border-light, #E3E3E3);
+  background: var(--Colors-Content-light, #FFF);
+  color: #333;
+}
+
+form img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+}
+
+form {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  transition: 0.5s;
+  animation: fadeIn 0.5s;
+}
+
+.inputgroup {
+  width: 100%;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+#sign-in-form,
+#sign-up-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#sign-in-page {
+  padding-top: 40%;
+}
+
+#sign-in-page h1 {
+  color: var(--Text, #333);
+  font-family: var(--Font-Familly-Interface-Body, Inter);
+  font-size: var(--Font-Size-14, 14px);
+  font-style: normal;
+  font-weight: var(--Font-Weight-Regular, 400);
+  line-height: var(--Font-Line-height-17, 17px);
+  padding-bottom: 16px;
+}
+
+form p {
+  text-align: left;
+  margin-bottom: -5%;
+}
+
+#description {
+  padding-bottom: 40%;
+}
+
+/* ---------- Button Group ---------- */
+
+.btns {
+  display: flex;
+  gap: 0.5em;
+}
+
+.container>.btns {
+  margin: 1em 0;
+}
+
+.pill {
+  display: inline-flex;
+  color: #03449E;
+  font-weight: 600;
+  padding: 14px 14px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  background: var(--Colors-Primary-alt, #E6F6FF);
+}
+
+
+/* ---------- Navigation Styling ---------- */
+nav {
+  background-color: var(--content-bg);
+  box-shadow: 0px 0.5px 8px 0px rgba(0, 0, 0, 0.25);
+  display: grid;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  bottom: 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 24px;
+}
+
+
+nav a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--river-bank);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+#topnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+#topnav-inner {
+  display: flex;
+  justify-content: right;
+}
+
+/* ---------- Page Styling ---------- */
+.page {
+  /* animation: fadeIn 0.5s;*/
+  margin-left: 16px;
+  margin-right: 16px;
+  padding-bottom: 35%;
+}
+
+/* ---------- Container Styling ---------- */
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* ---------- Grid Container Styling ---------- */
+.grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 1rem 0;
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.grid::-webkit-scrollbar {
+  display: none;
+  /* Chrome/Safari */
+}
+
+.grid>.collection-card {
+  cursor: pointer;
+}
+
+/* ---------- Grid Filter Styling ---------- */
+.grid-filter {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1em;
+  padding: 1em;
+  background-color: var(--white);
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  margin: 0 0 1em;
+  align-items: center;
+}
+
+.grid-filter select {
+  width: 100%;
+  padding: 1.1rem;
+}
+
+.grid-filter input,
+.grid-filter select {
+  margin: 1em 0 0;
+}
+
+/* ---------- Collection Card Styling ---------- */
+.collection-card {
+  border-radius: 2px;
+  border: 1px solid var(--Border, #E3E3E3);
+  background: #FFF;
+
+  gap: 12px;
+  display: flex;
+  width: 320px;
+  padding: 4px;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: 0.5s;
+  animation: fadeIn 0.5s;
+  cursor: pointer;
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+}
+
+.collection-card img {
+  height: 182.256px;
+  width: 312px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.collection-card h3 {
+  font-weight: 600;
+}
+
+.collection-card p {
+  margin: 0;
+  font-size: 12px;
+  padding: 12px;
+}
+
+.collection-card .pinned {
+  color: var(--dimmed);
+  border-radius: 999px;
+  font-size: 0.8em;
+  margin-top: 0.5em;
+  display: inline-block;
+}
+
+.inner-collection-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  padding: 16px;
+  gap: 8px;
+}
+
+/* ---------- Logo Styling ---------- */
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  /* Centers horizontally */
+}
+
+
+.logo {
+  max-width: 100%;
+  /* Ensures it doesn't overflow */
+  height: auto;
+  /* Maintains the aspect ratio */
+}
+
+
+/* ---------- Post Page Styling ---------- */
+#post-page .post-card>img {
+  height: auto;
+}
+
+#post-page .btns {
+  padding: 1em 0;
+}
+
+/* ---------- Login Form Styling ---------- */
+#sign-in-page,
+#sign-up-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+}
+
+.error-message {
+  color: var(--text-color-danger);
+  margin-top: 10px;
+  grid-column: 2;
+}
+
+.hide {
+  display: none;
+}
+
+.image-preview {
+  cursor: pointer;
+}
+
+/* ---------- Loader ---------- */
+
+.loader-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  /* Full viewport width */
+  height: 100vh;
+  /* Full viewport height */
+  background-color: rgba(0, 0, 0, 0.3);
+  /* Semi-transparent dark background */
+}
+
+.loader {
+  width: 75px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--green);
+  --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+
+@keyframes l3 {
+  to {
+    transform: rotate(1turn);
+  }
+}
