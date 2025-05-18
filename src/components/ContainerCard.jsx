@@ -25,6 +25,7 @@ export default function ContainerCard({ container }) {
 
   {/* Edited Text */}
   <p style={{ marginLeft: 43 }}>{container.edited}</p>
+  
 </section>
       </div>
     </article>
