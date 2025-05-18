@@ -15,15 +15,13 @@ export default function ContainerCard({ container }) {
 
         <h2>{container.assets} New Assets Added</h2>
 
-        <section style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <section style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
        
        <div style={{ display: "flex", alignItems: "center"}}>
          <UserAvatar uid={container.ownerImage} size={24} />
          <p style={{ margin: 0 }}>{container.owner}</p>
        </div>
        <p style={{ marginLeft: 43 }}>{container.edited}</p>
-
-
 
 
 </section>
