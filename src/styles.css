@@ -26,7 +26,6 @@ html {
 body,
 html {
   background-color: var(--content-bg);
-  color: var(--green-charcoal);
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   height: 100%;
@@ -128,6 +127,7 @@ form[action$="destroy"] button:hover,
 
 input {
   border: 2px solid ADB5BD;
+  background-color: var(--Colors-Content-light, #FFF);
 }
 
 .error {
@@ -189,6 +189,7 @@ form {
   gap: 12px;
   display: flex;
   flex-direction: column;
+  background-color: var(--Colors-Content-light, #FFF);
 }
 
 #sign-in-form,
