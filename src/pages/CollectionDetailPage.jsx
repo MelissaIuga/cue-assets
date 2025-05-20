@@ -70,14 +70,14 @@ export default function CollectionDetailPage() {
           </div>
         )}
 
-<h2 style={{ marginTop: "1.5em" }}>Containers</h2>
+<h2>{collection.title}</h2>
         <div
           className="grid"
           style={{
-            display: "flex", // Use Flexbox for layout
-            flexWrap: "wrap", // Enable wrapping
-            gap: "16px", // Add spacing between items
-            justifyContent: "space-between", // Optional: Adjust alignment
+            display: "flex",
+            flexWrap: "wrap", 
+            gap: "16px", 
+            justifyContent: "space-between",
           }}
         >
           {containers.map(container => (

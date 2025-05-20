@@ -146,16 +146,6 @@ export default function ProfilePage() {
             disabled
           />
 
-          <label htmlFor="title">Title</label>
-          <input
-            id="title"
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            name="title"
-            placeholder="Type your title"
-          />
-
           <input
             type="file"
             className="hide"
